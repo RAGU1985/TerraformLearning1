@@ -20,11 +20,11 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'ravindergupta1985 docker hub'
-        repository: 'ravindergupta1985/weatherapi'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-        tags: |
-          $(tag)
+      - task: Docker@2
+        inputs:
+          containerRegistry: 'Terraform Docker Hub Connection'
+          repository: 'ravindergupta1985/weatherapi'
+          command: 'buildAndPush'
+          Dockerfile: '**/Dockerfile'
+          tags: |
+            $(tag)
