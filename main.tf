@@ -28,7 +28,7 @@ variable "imagebuild" {
 
 resource "azurerm_resource_group" "tf_test" {
     name = "tfmainrg"
-    location = "West India"
+    location = "southindia"
 }
 
 resource "azurerm_container_group" "tfcg_test" {
